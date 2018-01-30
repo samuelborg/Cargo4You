@@ -1,0 +1,55 @@
+﻿@model Cargo4You.Models.Package
+
+@{
+    ViewBag.Title = "Cargo4You - Order";
+}
+
+<h2><b><span class="glyphicon glyphicon-euro" aria-hidden="true"></span><br />Order Package</b></h2>
+
+<div class="panel panel-success">
+    <div class="panel-heading">
+        <h2 class="panel-title">Take the order! Cargo4You can easily ship with the following details.</h2>
+    </div>
+    <div class="panel-body">
+        <div>
+            <dl class="dl-horizontal">
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.vol)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.width) x @Html.DisplayFor(model => model.height) x @Html.DisplayFor(model => model.depth) = @Html.DisplayFor(model => model.vol) cm&sup3;
+                </dd>
+
+                <br />
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.weight)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.weight) kg
+                </dd>
+
+                <hr />
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.price)
+                </dt>
+
+                <h2>
+                    € @Html.DisplayFor(model => model.price)
+                </h2>
+
+            </dl>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Further Details", "Details", new { id = Model.id }, new { @class = "btn btn-primary" })
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-info" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>
+

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cargo4You", "Cargo4You\Cargo4You.csproj", "{F68A4BB7-8D67-4EE0-8AA4-8E3A101B7BDA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cargo4You.Tests", "Cargo4You.Tests\Cargo4You.Tests.csproj", "{2866D8FC-1AE0-42C6-B951-D0D2DDCE4A9C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F68A4BB7-8D67-4EE0-8AA4-8E3A101B7BDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68A4BB7-8D67-4EE0-8AA4-8E3A101B7BDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68A4BB7-8D67-4EE0-8AA4-8E3A101B7BDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68A4BB7-8D67-4EE0-8AA4-8E3A101B7BDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2866D8FC-1AE0-42C6-B951-D0D2DDCE4A9C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2866D8FC-1AE0-42C6-B951-D0D2DDCE4A9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2866D8FC-1AE0-42C6-B951-D0D2DDCE4A9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2866D8FC-1AE0-42C6-B951-D0D2DDCE4A9C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

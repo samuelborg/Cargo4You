@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Cargo4You.Models.Package>
+
+@{
+    ViewBag.Title = "Cargo4You - List of Packages";
+}
+
+<h2><b>List of Packages</b></h2>
+
+<p>
+    @Html.ActionLink("New Package", "Create", null, new { @class = "btn btn-primary" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.height)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.width)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.depth)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vol)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dprice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.wprice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.height) cm
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.width) cm
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.depth) cm
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vol) cm&sup3;
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.weight) kg
+        </td>
+        <td>
+            €@Html.DisplayFor(modelItem => item.dprice)
+        </td>
+        <td>
+            €@Html.DisplayFor(modelItem => item.wprice)
+        </td>
+        <td>
+            €@Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-info" })
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }, new { @class = "btn btn-primary" })
+            @Html.ActionLink("Checkout", "CheckOut", new { id = item.id }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "Delete", new { id=item.id }, new { @class = "btn btn-danger" })
+        </td>
+    </tr>
+}
+
+</table>

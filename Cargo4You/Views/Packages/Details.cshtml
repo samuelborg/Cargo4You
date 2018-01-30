@@ -1,0 +1,82 @@
+﻿@model Cargo4You.Models.Package
+
+@{
+    ViewBag.Title = "Cargo4You - Details";
+}
+
+<h2><b>Details</b></h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.height)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.height) cm
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.width)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.width) cm
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.depth)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.depth) cm
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vol)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vol) cm&sup3;
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.weight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.weight) kg
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dprice)
+        </dt>
+
+        <dd>
+            € @Html.DisplayFor(model => model.dprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.wprice)
+        </dt>
+
+        <dd>
+            € @Html.DisplayFor(model => model.wprice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            € @Html.DisplayFor(model => model.price)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }, new { @class = "btn btn-info" })
+    @Html.ActionLink("Delete", "Delete", new { id = Model.id }, new { @class = "btn btn-danger" })
+    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+</p>

@@ -1,0 +1,87 @@
+﻿@model Cargo4You.Models.Package
+
+@{
+    ViewBag.Title = "Cargo4You - Delete";
+}
+
+<h2><b><span class="glyphicon glyphicon-trash" aria-hidden="true"></span><br />Delete</b></h2>
+
+<div class="panel panel-danger">
+    <div class="panel-heading">
+        <h2 class="panel-title">Are you sure you want to delete this?</h2>
+    </div>
+    <div class="panel-body">
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.height)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.height)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.width)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.width)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.depth)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.depth)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.weight)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.weight)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.dprice)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.dprice)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.wprice)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.wprice)
+                </dd>
+
+                <hr />
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.price)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.price)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color">
+                    <input type="submit" value="Yes, delete" class="btn btn-danger" />
+                    @Html.ActionLink("No, back to List", "Index", null, new { @class = "btn btn-primary" })
+                </div>
+            }
+        </div>
+        </div>
+    </div>
